@@ -82,6 +82,9 @@ namespace Gyakorlas_Tomi_2022._10._14
 
             Console.WriteLine("Az átfogó hossza: " + Math.Round(Math.Sqrt(atfnz),2));
 
+            //Írj programot, mely beolvassa a téglatest három élének hosszát, és kiírja a
+            //felszínének és térfogatának mérőszámát!
+
             Console.ReadKey();
         }
     }
