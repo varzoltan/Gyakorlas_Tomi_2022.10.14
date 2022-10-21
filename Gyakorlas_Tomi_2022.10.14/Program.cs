@@ -85,6 +85,120 @@ namespace Gyakorlas_Tomi_2022._10._14
             //Írj programot, mely beolvassa a téglatest három élének hosszát, és kiírja a
             //felszínének és térfogatának mérőszámát!
 
+            Console.Write("Adja meg az 1. oldalt: ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Adja meg az 2. oldalt: ");
+            b = int.Parse(Console.ReadLine());
+            Console.Write("Adja meg az 3. oldalt: ");
+            c = int.Parse(Console.ReadLine());
+
+            int fsz = (a  *  b  +  b  *  c  +  a  *  c)  *  2;
+            int tf = a * b *  c;
+
+            Console.WriteLine($"A téglatest felszíne: {fsz}, és térfogata:{tf}");
+
+            //Írj programot, mely beolvassa egy kör átmérőjét, és kiírja a kör kerületét és
+            //területét! A pi értékének meghatározásához használd a Math.PI értéket!
+
+            Console.Write("Adja meg a kor átmérőjét: ");
+            int d = int.Parse(Console.ReadLine());
+            double K = d   *   Math.PI;
+            double T = (d   /   2)   *   (d   /   2)   *   Math.PI;
+            Console.WriteLine($"A kör területe: {T}, kerülete: {K}");
+
+            //Írj programot, mely beolvas egy pozitív egész számot, és kiírja az egész számokat a
+            //képernyőre eddig a számig, egymástól szóközzel elválasztva!
+            //Pl.:5 és kiírja a progi: 1 2 3 4 5
+            Console.Write("Adjon meg egy pozitív egész számot: ");
+            int x = int.Parse(Console.ReadLine());
+            for (int i = 0; i <= x; i++)
+            {
+                Console.Write(i+" ");
+                //Console.Write(" ");
+            }
+
+            //Írj programot, mely beolvas egy pozitív egész számot, és kiírja az egész számokat
+            //egymás alá a képernyőre eddig a számig!
+
+            Console.Write("Adjon meg egy pozitív egész számot: ");
+            x = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= x; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            //Írj programot, mely beolvas egy pozitív egész számot, és kiírja az osztóit!
+
+            Console.Write("Adjon meg egy pozitív egész számot: ");
+            int y = int.Parse(Console.ReadLine());
+            Console.Write("A szám osztói: ");
+            for  (int i = 2; i  <  y; i++)
+            {
+                if (y % i==0)
+                {
+                    Console.Write(i + ", ");
+                }
+            }
+
+            //Írj programot, mely beolvas egy pozitív egész számot, és kiírja az osztóinak az
+            //összegét!
+
+            Console.Write("Adjon meg egy pozitív egész számot: ");
+            y = int.Parse(Console.ReadLine());
+            int ossz = 0;//Összegzés törvénye
+            for (int i = 2; i < y; i++)
+            {
+                if (y % i == 0)
+                {
+                    ossz += i;
+                    
+                }
+            }
+            Console.WriteLine(ossz);
+
+            //Írj programot, mely beolvas egy pozitív egész számot, és megmondja, hogy
+            //tökéletes szám-e!(A tökéletes számok azok, melyek osztóinak összege egyenlő a
+            //szám kétszeresével.Ilyen szám pl.a 6, mert 2 * 6 = 1 + 2 + 3 + 6.)
+
+            Console.Write("Adjon meg egy pozitív egész számot: ");
+            y = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= y; i++)
+            {
+                if (y % i == 0)
+                {
+                    ossz  +=  i;
+                }
+            }
+
+            if (ossz == 2*y)
+            {
+                Console.WriteLine("Tökéletes szám");
+            }
+            else
+            {
+                Console.WriteLine("Nem tökéletes szám");
+            }
+
+            //Írj programot, mely beolvassa a hatvány alapját és a kitevőt, és kiírja a
+            //hatványértéket!
+            Console.Write("Adjon meg a hatvány alapját: ");
+            int al = int.Parse(Console.ReadLine());
+            Console.Write("Adjon meg a hatvány kitevőjét: ");
+            int kit = int.Parse(Console.ReadLine());
+            int hat =  1;
+            for(int i = 1;i<=kit;i++)
+            {
+                hat *= al;
+            }
+
+            Console.WriteLine(hat);
+
+            //Írj programot, ami csak pozitív számot hajlandó beolvasni.
+
+            Console.Write("Adjon meg egy pozitív egész számot: ");
+            
+            
+
             Console.ReadKey();
         }
     }
